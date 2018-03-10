@@ -7,7 +7,31 @@
 #include<string.h>
 
 using namespace std;
- 
+ /* Better Approach 
+  public static boolean check(int arr[][]) {
+        int i, j;
+        int count[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        int count1[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        boolean b = true;
+        for (i = 0; i < 9; i++) {
+            for (j = 0; j < 9; j++) {
+
+                if (count[arr[j][i]] > i) {
+                    b = false;
+                    return b;
+                }
+                if (count1[arr[i][j]] > i) {
+                    b = false;
+                    return b;
+                }
+                count1[arr[i][j]]++;
+                count[arr[j][i]]++;
+            }
+
+        }
+        return b;
+    }
+ */
  int checkMatrix(int a[9][9],int ki,int kj){
      int sum=0;
      for(int i=0;i<3;i++){
