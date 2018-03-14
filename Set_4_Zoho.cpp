@@ -2,9 +2,7 @@
 Q:2 Sorting array according to factors of array elements
 
 #include <iostream>
-
 using namespace std;
-
 int main(){
     int n;
     cin>>n;
@@ -14,17 +12,15 @@ int main(){
     }
     int p[n]={0};
     for(int i=0;i<n;i++){
-        int d=a[i];
-        int prime=2;
-        while(d>1){ //Finding factors 
-            if(d%prime==0){
-                while(d%prime==0) d/=prime;
+        int num=1;
+        p[i]=1;
+        while(num <= a[i]/2){ //Finding factors 
+            if(a[i]%num==0){
                 p[i]++;
-            } else {
-                prime++;
             }
+            num++;
         }
-    }
+    } 
     for(int i=0;i<n-1;i++){ //Sorting the array a with respect to elemnts in array p
         for(int j=i+1;j<n;j++){
             if(p[i]<p[j]){
@@ -37,7 +33,7 @@ int main(){
             }
         }
     }
-    for(int i=0;i<n;i++) cout<<a[i]<<" ";
+   for(int i=0;i<n;i++) cout<<a[i]<<" ";
     cout<<endl;
     
     return 0;
