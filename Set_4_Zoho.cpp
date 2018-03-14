@@ -39,3 +39,60 @@ int main(){
     return 0;
 }
 */
+
+
+/*
+Q : 3 Number to Alphabet English
+
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+void Alpha10s(int n){
+    string s[]={"Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"};
+    cout<<s[n%10]<<" ";
+}
+void get10Mul(int n){
+    string s[]={"","","Twenty","Thirty","Fourty","Fifty","Sixty","Seventy","Eighty","Ninty"};
+    cout<<s[n]<<" ";
+}
+
+int main() {
+    for(int t=0;t<1000;t++){
+    int n=t;
+	//cin>>n;
+	 cout<<n<<" :  ";
+	string s[]={"Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"};
+	int digitCount = (n==0 ? 0 : floor(log10(n))+1);
+	if(digitCount==0) cout<<s[0];
+	int last_2_digits=n%100;
+	int digit_1=n%10;n=n/10;
+	int digit_2=n%10;
+	int digit_3=n/10;
+	
+	//cout<<digit_3<<" "<<digit_2<<" "<<digit_1<<endl;
+	
+	if(digitCount==3){
+	    cout<<s[digit_3]<<" Hundred ";
+	    digitCount--;
+	}if( last_2_digits > 9 && last_2_digits < 20 ){
+	    Alpha10s(last_2_digits);
+	    digitCount=0;
+	}
+	if(digitCount==2){
+	 if(digit_2==0){
+	     digitCount--;
+	 } else {
+	     get10Mul(digit_2);
+	     if(digit_1>0)
+	     cout<<s[digit_1]<<" ";
+	 }
+	} if(digitCount==1){
+	    cout<<s[digit_1]<<" ";
+	}
+	cout<<endl;
+    }
+	return 0;
+}
+
+*/
