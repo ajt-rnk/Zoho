@@ -95,4 +95,40 @@ int main() {
 	return 0;
 }
 
+/*
+Q: 4
+1
+1 1
+2 1
+1 2 1 1
+1 1 1 2 2 1
+*/
+/*
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+       String s="1";
+       String temp="";
+       int n=sc.nextInt();
+       n--;
+       System.out.println(s);
+       int count=0;
+       while(count<n){
+           int tCount=0;
+           for(int i=0;i<s.length();i++){
+               tCount++;
+               if(i==s.length()-1 || s.charAt(i)!=s.charAt(i+1)){
+                   temp+=String.valueOf(tCount);
+                    temp+=s.charAt(i);
+                   tCount=0;
+               }
+           }
+           s=temp;
+           temp="";
+           count++;
+           System.out.println(s);
+       }
+    }
+}
 */
