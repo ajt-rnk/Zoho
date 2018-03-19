@@ -1,0 +1,61 @@
+/*
+Q: Union Intersection Except 
+*/
+import java.io.*;
+import java.util.*;
+public class MyClass {
+    public static void main(String args[])  throws Exception {
+       BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+       int n=Integer.parseInt(br.readLine());
+       int m=Integer.parseInt(br.readLine());
+       
+       int[] a=new int[n];
+       int[] b=new int[m];
+       
+       String s=br.readLine();
+       String[] str=s.trim().split("\\s");
+       for(int i=0;i<n;i++) a[i]=Integer.parseInt(str[i]);
+       s=br.readLine();
+       str=s.trim().split(" ");
+       for(int i=0;i<m;i++) b[i]=Integer.parseInt(str[i]);
+       
+       //for(int i=0;i<n;i++) System.out.print(a[i]+" ");
+       //System.out.println();
+       //for(int i=0;i<m;i++) System.out.print(b[i]+" ");
+       
+       int[] ua=new int[m+n];
+       int[] ia=new int[m+n];
+       int[] ea=new int[m+n];
+       
+       Arrays.sort(a);
+       Arrays.sort(b);
+       
+      /* int i=0,j=0,uindex=0;
+       while(i<n && j<m){
+           if(a[i]==b[j]){
+               ua[uindex++]=a[i];
+               i++;
+               j++;
+           } else if(a[i]<b[j]){
+               ua[uindex++]=a[i++];
+           } else {
+               ua[uindex++]=b[j++];
+           }
+       }
+       while(i<n) ua[uindex++]=a[i++];
+       while(j<m) ua[uindex++]=b[j++];
+       for(i=0;i<uindex;i++) System.out.print(ua[i]+" ");*/
+       
+       /*int i=0,j=0;
+       int iindex=0;
+       while(i<n && j<m){
+           if(a[i]==b[j]){
+               ia[iindex++]=a[i];
+               i++;
+               j++;
+           } else if(a[i]>b[j]) i++;
+           else j++;
+       }
+       for(i=0;i<iindex;i++) System.out.print(ia[i]+" ");*/
+    }
+}
