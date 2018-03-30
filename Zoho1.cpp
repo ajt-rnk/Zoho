@@ -22,6 +22,23 @@ int check(char s[5][6],int i,int j,int count,char *t){
     
     return (check(s,i+1,j,count+1,t) || check(s,i,j+1,count+1,t));
 }
+/*bool search(string s[],string str,int row,int col){
+ int j=0,k=0;
+ for(int i=row;i<5 && j<str.length();i++,j++){
+     if(s[i][col]!=str[j]){
+         break;
+     }
+ }
+ if(j==str.length()){
+     endi=;
+     endj=col;
+     
+ }
+ for(int i=col;i<5 && k<str.length();i++,k++){
+     if(s[row][i]!=str[k]){
+         break;
+     }
+ }*/
 
 int main() {
 	char s[5][6]={"WELCO","METOZ","OHOCO","RPORA","TION "};
